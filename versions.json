@@ -1,7 +1,7 @@
 {
   "version": "1.3.25",
   "tag": "v1.3.25",
-  "sha256": "582af45676a3d8f665839d88e53a8e06fe8cab0d237423cda909fd7f87969b28",
+  "sha256": "dc0cecba31b6b87aa96f3e5b9bdf1322a5d0e99d6d85a449506cdb00c84c75fb",
   "notes": [
     "رفع الإصدار إلى 1.3.25 وversionCode إلى 155",
     "تعطيل Android Auto Backup وجعل ProfileInstallReceiver داخليًا",
