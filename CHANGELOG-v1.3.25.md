@@ -1,27 +1,27 @@
 # يواقيت | المسلم — v1.3.25
 
-## ما تم تطبيقه
+## قاعدة الإصدار
 
-- رفع `versionName` من `1.3.24` إلى `1.3.25`.
-- رفع `versionCode` من `154` إلى `155`.
-- الحفاظ على package name: `com.yawaqit.app`.
-- تعطيل Android Auto Backup عبر `allowBackup=false`.
-- جعل `androidx.profileinstaller.ProfileInstallReceiver` غير مُصدّر للتطبيقات الأخرى.
-- الحفاظ على جميع ملفات DEX والموارد والمكتبات والأصول الأصلية: تمت مقارنة 582 إدخالًا غير متعلق بـManifest، ولم يُحذف أو يتغير أي منها.
-- توقيع APK بمفتاح Release جديد باسم alias `YAWAQIT` باستخدام APK Signature Scheme v2 وv3.
+هذا الإصدار مبني مباشرة من APK `v1.3.16` الذي أرسله المستخدم، مع الحفاظ على package name `com.yawaqit.app` وجميع الأصول وملفات التطبيق الأصلية.
+
+## ما تم تطبيقه داخل APK
+
+تم رفع `versionName` إلى `1.3.25` و`versionCode` إلى `155`. تم تعطيل Android Auto Backup عبر `allowBackup=false`، وجعل `androidx.profileinstaller.ProfileInstallReceiver` غير مُصدّر للتطبيقات الأخرى. لم تُحذف أو تُعدّل ملفات DEX أو موارد أو مكتبات أو أصول التطبيق؛ تمت مقارنة 582 إدخالًا غير متعلق بـManifest وكانت جميعها مطابقة لنسخة v1.3.16.
+
+تم توقيع الملف بمفتاح Release جديد alias `YAWAQIT` باستخدام APK Signature Scheme v2 وv3.
 
 ## التحقق
 
-- package: `com.yawaqit.app`
-- versionCode: `155`
-- versionName: `1.3.25`
-- certificate SHA-256: `42:E5:4E:09:4A:73:F1:FB:0B:90:B4:BE:01:31:A7:02:B9:F2:76:26:44:69:60:CC:89:EE:40:A8:2F:27:B0:E9`
-- APK SHA-256: `a5aad790ea015a814368d5a94a4374169dd02af3ecd952481d2667bba90dc96f`
-- `apksigner verify`: ناجح
-- `zipalign -c -v 4`: ناجح
+package: `com.yawaqit.app`  
+versionCode: `155`  
+versionName: `1.3.25`  
+certificate SHA-256: `42:E5:4E:09:4A:73:F1:FB:0B:90:B4:BE:01:31:A7:02:B9:F2:76:26:44:69:60:CC:89:EE:40:A8:2F:27:B0:E9`  
+APK SHA-256: `1cb8e4c3ce4c0228fe665336b82533cb4ab50c23284784b6a81b441b140d1d49`  
 
-## ملاحظة مهمة
+نجح `apksigner verify` و`zipalign -c -v 4`. كما تم تنزيل الملف من GitHub والتحقق من مطابقته للنسخة المنشورة.
 
-لم يكن مشروع Android/Capacitor الأصلي ولا ملف keystore القديم متاحين. لذلك تم إنشاء هذا الإصدار بطريقة محافظة من APK `1.3.24` نفسه. لم تُطبّق التغييرات التي تتطلب المصدر الأصلي مثل إعادة بناء BootReceiver، حساب المواقيت محليًا، نظام التنزيلات، اختبارات WorkManager، تحسينات WebView وواجهة المستخدم، وإخراج AAB. لم يتم الادعاء باختبار ديناميكي على جهاز Android لعدم توفر جهاز/محاكي في بيئة البناء.
+## حدود الإصلاح
 
-مفتاح Release الجديد يجب حفظه خارج GitHub لاستخدامه في كل الإصدارات القادمة.
+لم يكن مشروع Android/Capacitor الأصلي متوفرًا، لذلك لا يمكن من APK وحده إعادة بناء التغييرات البرمجية الكبيرة المطلوبة في البرومت، مثل BootReceiver لإعادة الجدولة، الحساب المحلي لمواقيت 30 يومًا، WorkManager، نظام تنزيل السور، إعادة بناء التنقل، تحسينات WebView، واجهة المستخدم، اختبارات الأجهزة وإخراج AAB. هذه البنود مؤجلة إلى حين توفر المشروع الأصلي. لم يتم الادعاء بإجراء اختبار ديناميكي على جهاز Android لعدم توفر جهاز أو محاكي.
+
+يجب حفظ keystore الجديد خارج GitHub لاستخدامه في جميع التحديثات القادمة.
