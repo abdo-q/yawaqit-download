@@ -1,0 +1,27 @@
+{
+  "name": "يواقيت | المسلم",
+  "short_name": "يواقيت | المسلم",
+  "description": "مواقيت الصلاة والقرآن والأذكار والتلاوات والقبلة",
+  "lang": "ar",
+  "dir": "rtl",
+  "start_url": "/",
+  "scope": "/",
+  "display": "fullscreen",
+  "orientation": "portrait",
+  "background_color": "#0b1918",
+  "theme_color": "#0b1918",
+  "icons": [
+    {
+      "src": "/assets/logo.png",
+      "sizes": "197x188",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "id": "/",
+  "categories": [
+    "lifestyle",
+    "education"
+  ],
+  "prefer_related_applications": false
+}
